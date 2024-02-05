@@ -1,0 +1,32 @@
+{
+    "name": "greencryptopay/magento2-plugin",
+    "type": "magento2-module",
+    "description": "Bitcoin Payment Gateway for Magento 2 via Green Crypto Processing",
+    "keywords": [
+      "greencryptopay",
+      "bitcoin",
+      "merchant",
+      "magento",
+      "btc"
+    ],
+    "homepage": "https://greencryptopay.com",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Developers team",
+            "email": "support@greencryptopay.com",
+            "homepage": "https://github.com/GreenCryptoPay/greencryptopay-php/graphs/contributors"
+        }
+    ],
+    "require": {
+        "greencryptopay/greencryptopay-php": "^1.0"
+    },
+    "autoload": {
+        "files": [
+          "registration.php"
+        ],
+        "psr-4": {
+            "GreenCryptoPay\\Merchant\\": ""
+        }
+    }
+}

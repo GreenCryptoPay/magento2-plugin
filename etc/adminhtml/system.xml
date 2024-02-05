@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="payment">
+            <group id="greencryptopay_merchant" translate="label" type="text" sortOrder="88" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Bitcoin via Green Crypto Processing</label>
+                <comment>
+                    <![CDATA[
+                        <a href="https://greencryptopay.com/ru/faq" target="_blank">
+                            Not working? Common issues
+                        </a>
+                        <a href="mailto:support@greencryptopay.com">support@greencryptopay.com</a>
+                    ]]>
+                </comment>
+
+                <field id="active" translate="label" type="select" showInDefault="1" showInWebsite="1">
+                    <label>Enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+
+                <field id="testnet" translate="label" type="select" showInDefault="1" showInWebsite="1">
+                    <label>Testnet</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>Enable testnet</comment>
+                </field>
+
+                <field id="merchant_id" translate="label" type="text" showInDefault="1" showInWebsite="1">
+                    <label>Merchant id</label>
+                    <comment><![CDATA[ Set merchant id <a href="https://greencryptopay.com/ru/standard">see more</a> ]]></comment>
+                </field>
+
+                <field id="secret_key" translate="label" type="text" showInDefault="1" showInWebsite="1">
+                    <label>Secret Key</label>
+                    <comment><![CDATA[ Set secret key <a href="https://greencryptopay.com/ru/standard">see more</a> ]]></comment>
+                </field>
+
+                <field id="number_of_confirmations" translate="label" type="text" showInDefault="1" showInWebsite="1">
+                    <label>Number of confirmations</label>
+                    <comment> Specify the number of confirmations for to confirm the payment </comment>
+                </field>
+
+                <field id="request_signature" translate="label" type="text" showInDefault="1" showInWebsite="1">
+                    <label>Request signature</label>
+                    <comment> Arbitrary string for request signature. </comment>
+                </field>
+
+                <field id="title" translate="label" type="text" showInDefault="1" showInWebsite="1">
+                    <label>Title</label>
+                    <comment> The payment method title which a customer sees at the checkout of your store.</comment>
+                </field>
+
+                <field id="description" translate="label" type="text" showInDefault="1" showInWebsite="1">
+                    <label>Description</label>
+                    <comment> The payment method description which a user sees at the checkout of your store. </comment>
+                </field>
+
+                <field id="allowspecific" translate="label" type="allowspecific"
+                       showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Payment from Applicable Countries</label>
+                    <source_model>Magento\Payment\Model\Config\Source\Allspecificcountries</source_model>
+                </field>
+
+                <field id="specificcountry" translate="label" type="multiselect"
+                       showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Payment from Specific Countries</label>
+                    <source_model>Magento\Directory\Model\Config\Source\Country</source_model>
+                </field>
+
+                <field id="min_order_total" translate="label" type="text"
+                       showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Minimum Order Total</label>
+                </field>
+
+                <field id="max_order_total" translate="label" type="text"
+                       showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Maximum Order Total</label>
+                    <comment>Leave empty to disable limit</comment>
+                </field>
+
+                <field id="sort_order" translate="label" type="text"
+                       showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Sort Order</label>
+                </field>
+
+                <field id="wallet_link" translate="label" type="text"
+                       showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Wallet link</label>
+                </field>
+
+                <field id="time_to_pay" translate="label" type="text"
+                       showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Time to pay</label>
+                </field>
+
+            </group>
+        </section>
+    </system>
+</config>

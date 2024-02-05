@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <payment>
+            <greencryptopay_merchant>
+                <active>1</active>
+                <model>GreenCryptoPayPaymentFacade</model>
+                <order_status>pending_payment</order_status>
+                <title>Bitcoin via Green Crypto Processing</title>
+                <allowspecific>0</allowspecific>
+                <can_use_internal>1</can_use_internal>
+                <can_use_checkout>1</can_use_checkout>
+                <is_gateway>0</is_gateway>
+                <is_offline>0</is_offline>
+                <authorize>0</authorize>
+                <capture>0</capture>
+                <void>0</void>
+                <time_to_pay>10</time_to_pay>
+                <can_initialize>1</can_initialize>
+            </greencryptopay_merchant>
+        </payment>
+    </default>
+</config>
